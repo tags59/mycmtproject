@@ -1,17 +1,18 @@
-- hosts: webservers 
-  become: True
+---
+- name: testing jenkis and ansible connection
+  hosts: webservers 
+  become: true
   tasks:
-    - name: Install packages
+    - name: Install apache software package
       apt:
-        name: "httpd"
-        state: "present"
-    - name: Start Apache server
-      service:
-        name: httpd
-        state: started
-        enabled: True
+        name: apache2
+        state: present
     - name: Deploy static website
       copy:
         src: index.html
         dest: /var/www/html/
+    - name: Restart apache
+      service:
+         name: apache2
+         state: restarted
 ...
