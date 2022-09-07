@@ -1,5 +1,5 @@
 ---
-- name: testing jenkis and ansible connection
+- name: testing jenkins and ansible connection
   hosts: webservers 
   become: true
   tasks:
