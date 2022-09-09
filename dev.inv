@@ -1,3 +1,2 @@
-[webservers]
-3.82.251.6 ansible_ssh_user=ubuntu
-18.212.186.33 ansible_ssh_user=ubuntu
+[prod]
+172.31.61.167
